@@ -1,0 +1,24 @@
+page-detail {
+
+    // a two color background, with the top area being transparent
+    // with a height of the 'thumbnail'. the rest of the page is white
+    ion-content.content {
+
+        background-color:       transparent;
+        background-image:       linear-gradient(to bottom, transparent, transparent), linear-gradient(to bottom, #fff, #fff);
+        background-repeat:      no-repeat;
+    
+    }
+
+    // disable the overflow when the detail page is minimized
+    ion-content.disable-scrolling .scroll-content {
+        overflow-y: hidden;
+    }
+    
+    // keep the pointer events present on the image
+    // when the detail page is minimized
+    ion-content.disable-scrolling img {
+        pointer-events: auto;
+    }
+    
+}

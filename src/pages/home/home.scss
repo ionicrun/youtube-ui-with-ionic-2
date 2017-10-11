@@ -1,3 +1,25 @@
+// a 'hidden' directive is added to a page when a new page is
+// pushed to the navigation stack. but to be able to see it 
+// when the detail page is minimized, we need to set its 
+// display to be block at all times.
+page-home[hidden] {
+    display: block !important;
+}
+
 page-home {
+
+    // just some minor tweaks
+    .bar-button {
+        margin: 0 1rem;
+        font-size: 1.3rem;
+    }
+
+    .toolbar-ios ion-title {
+        padding-left: 16px;
+    }
+
+    .social-cards ion-col {
+        padding: 0;
+    }
 
 }

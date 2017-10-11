@@ -38,7 +38,9 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  white:    #fff,
+  greyish:    #636363
 );
 
 
@@ -46,7 +48,8 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+/// @prop - Text alignment of the toolbar title
+$toolbar-ios-title-text-align:              left !default;
 
 
 // App Material Design Variables

@@ -1,14 +1,77 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+
+  <ion-navbar color="white">
+    <ion-title>ionicTube</ion-title>
+    <ion-buttons end>
+      <button ion-button
+              icon-only
+              small
+              color="greyish">
+          <ion-icon ios="md-videocam" md="md-videocam"></ion-icon>
+        </button>
+      <button ion-button
+              icon-only
+              color="greyish">
+          <ion-icon ios="md-search" md="md-search"></ion-icon>
+        </button>
+      <button ion-button
+              icon-only
+              color="greyish">
+          <ion-icon ios="md-contact" md="md-contact"></ion-icon>
+        </button>
+    </ion-buttons>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+
+  <ion-card *ngFor="let card of cards">
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img [src]="card.imgAvatar">
+      </ion-avatar>
+      <h2>{{card.name}}</h2>
+      <p>{{card.dob}}</p>
+    </ion-item>
+
+    <img [src]="card.imgCover"
+         (click)="pushDetailPage(card)">
+
+    <ion-card-content>
+      <p>{{card.quote}}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button
+                color="primary"
+                clear
+                small
+                icon-start>
+                  <ion-icon name='thumbs-up'></ion-icon>
+                  {{card.likes}}
+                </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button
+                color="primary"
+                clear
+                small
+                icon-start>
+                  <ion-icon name='text'></ion-icon>
+                  {{card.comments}}
+                </button>
+      </ion-col>
+      <ion-col align-self-center
+               text-center>
+        <ion-note>
+          {{card.createdAt}}
+        </ion-note>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
 </ion-content>

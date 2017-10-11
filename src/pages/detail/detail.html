@@ -1,0 +1,102 @@
+<ion-content [class.disable-scrolling]='disableScrolling'>
+
+  <img (panleft)='onPanX($event)'
+       (panright)='onPanX($event)'
+       (panup)='onPanY($event)'
+       (pandown)='onPanY($event)'
+       (panstart)='onPanStart($event)'
+       (panend)='onPanEnd($event)'
+       (tap)='onTap($event)'
+       [src]='card.imgCover' />
+
+  <div padding>
+
+    <h5>Maecenas elementum vulputate malesuada.</h5>
+    <p>Cras risus felis, sollicitudin accumsan risus sollicitudin, feugiat tincidunt libero. Nunc mollis metus ex, eget semper
+      lorem scelerisque a.</p>
+    <ion-note>
+      7.8M views
+    </ion-note>
+
+    <ion-row text-center
+             padding-top
+             padding-bottom>
+      <ion-col>
+        <button ion-button
+                color='greyish'
+                clear
+                large
+                icon-only>
+                      <ion-icon name='thumbs-up'></ion-icon>
+                    </button>
+        <ion-note>
+          3.9M
+        </ion-note>
+      </ion-col>
+      <ion-col>
+        <button ion-button
+                color='greyish'
+                clear
+                large
+                icon-only>
+                      <ion-icon name='thumbs-down'></ion-icon>
+  
+                    </button>
+        <ion-note>
+          113
+        </ion-note>
+      </ion-col>
+      <ion-col>
+        <button ion-button
+                color='greyish'
+                clear
+                large
+                icon-only>
+                      <ion-icon name='share'></ion-icon>
+                      
+                    </button>
+        <ion-note>
+          Share
+        </ion-note>
+      </ion-col>
+      <ion-col>
+        <button ion-button
+                color='greyish'
+                clear
+                large
+                icon-only>
+                      <ion-icon name='list'></ion-icon>
+                      
+                    </button>
+        <ion-note>
+          Add to
+        </ion-note>
+      </ion-col>
+
+    </ion-row>
+    <ion-list padding-top>
+      <ion-item>
+        <ion-avatar item-start>
+          <img [src]='card.imgAvatar'>
+
+        </ion-avatar>
+        <h2>Quisque tristique ipsum</h2>
+        <p> risus ultrices</p>
+      </ion-item>
+      <ion-item>
+        <ion-label>Up next</ion-label>
+        <ion-toggle checked='true'></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+    <p>
+      Morbi ornare ante quis ante facilisis, vel rutrum lacus tincidunt. Phasellus id lectus enim. Maecenas lacinia ornare fringilla.
+      Vestibulum volutpat metus ac leo placerat, eu rutrum nulla dapibus. Etiam id blandit risus, nec finibus orci. Aenean
+      luctus condimentum mi, vitae ultrices eros rutrum quis. In hac habitasse platea dictumst. Cras sed faucibus mauris.
+      Aenean sed neque ut quam tincidunt venenatis. Phasellus arcu nisi, tincidunt id rhoncus ac, aliquet et sapien. Donec
+      nibh metus, ornare ut nisi in, molestie luctus est. Etiam tincidunt mattis augue id ultrices.
+    </p>
+
+  </div>
+
+</ion-content>
