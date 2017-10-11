@@ -48,7 +48,16 @@ export class HomePage {
 
 
   public pushDetailPage(card) {
-    this.navCtrl.push('DetailPage', card );
+    // to prevent stacked pages, always pop to the root
+    // and then push the page. some nuance could be added
+    // here of course
+    this
+      .navCtrl
+      .popToRoot()
+      .then(() => {
+        this.navCtrl.push('DetailPage', card);
+      });
+
   }
 
 }
