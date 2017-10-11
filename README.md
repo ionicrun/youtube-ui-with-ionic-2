@@ -12,6 +12,8 @@ $ cd youtube-ui-with-ionic-2
 ```
 
 ```bash
+$ npm i
+# or
 $ ionic cordova platform add android ios
 ```
 
